@@ -1,0 +1,40 @@
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Logs
+*.log
+logs/
+
+# OS Dateien
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# IntelliJ (falls später genutzt)
+.idea/
+*.iml
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# Java
+*.class
+
+# Env / Secrets
+.env
+.env.local
+application-local.yml
+application-dev.yml
+application-prod.yml
+
+# Sonstiges
+*.tmp
+*.swp
+
+# Unit Test Reports
+TEST-*.xml
