@@ -1,0 +1,97 @@
+### Autoren
+### Alle Autoren mit ihren Werken
+GET http://localhost:8080/api/v1/authors/books
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSb3V2ZW5OYXVrZUBleGFtcGxlLmNvbSIsImlhdCI6MTc3NTEzMTYwNSwiZXhwIjoxNzc1MTMzMDQ1fQ.ckFlfPWDRBna6wyl05svXm-qcYAAIc9j9AAKRQGko50
+
+### Einzelne Autoren mit ihren Werken
+GET http://localhost:8080/api/v1/authors/1/books
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSb3V2ZW5OYXVrZUBleGFtcGxlLmNvbSIsImlhdCI6MTc3NTEzMTUzNywiZXhwIjoxNzc1MTMyOTc3fQ.erDf_WBHg8dU6-8oXTEPVXJ4UaZ_B3NRsuJdYSq0eWA
+
+### Alle Autoren ohne ihre Werke
+GET http://localhost:8080/api/v1/authors
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSb3V2ZW5OYXVrZUBleGFtcGxlLmNvbSIsImlhdCI6MTc3NTEzMTYwNSwiZXhwIjoxNzc1MTMzMDQ1fQ.ckFlfPWDRBna6wyl05svXm-qcYAAIc9j9AAKRQGko50
+
+
+### Einzelne Autoren ohne ihre Werke
+GET http://localhost:8080/api/v1/authors/2
+Authorization: Bearer {Hier Token einfügen}
+
+### Autor erstellen
+POST http://localhost:8080/api/v1/authors
+Authorization: Bearer {Hier Token einfügen}
+
+Content-Type: application/json
+
+{
+  "name": "Nauke"
+}
+
+### Autor mit all seinen Büchern löschen
+DELETE http://localhost:8080/api/v1/authors/1
+
+
+### Autor und alle seine Bücher löschen
+DELETE http://localhost:8080/api/v1/authors
+
+### Update Author name
+PATCH http://localhost:8080/api/v1/authors/3
+Content-Type: application/json
+
+{
+  "name": "Rouven"
+}
+
+
+###Books
+### Alle Bücher
+GET http://localhost:8080/api/v1/books
+
+### Einzelne Bücher
+GET http://localhost:8080/api/v1/books/1
+
+### Alle vorhanden Büchertitel ausgeben
+GET http://localhost:8080/api/v1/books/all
+
+### ISBN durch Titel herausbekommen
+GET http://localhost:8080/api/v1/books/findISBN?title=How%20to%20be%20arbeitslos
+
+### Neues Buch anlegen
+POST http://localhost:8080/api/v1/books
+Content-Type: application/json
+
+{
+  "title": "bester Mann",
+  "isbn": "123-67",
+  "authorId": 2
+  
+}
+
+### Buch Löschen, Autor bleibt
+DELETE http://localhost:8080/api/v1/books/4
+
+
+###Security
+### Get access
+GET http://localhost:8080/api/v1/demo-controller
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSb3V2ZW5OYXVrZUBleGFtcGxlLmNvbSIsImlhdCI6MTc3NTA4MjE0MiwiZXhwIjoxNzc1MDgzNTgyfQ.tPfXRuG_UlXmcPUXl7EDXfd0Gp6zfLgA6C8XmE3j9Ps
+
+
+### Register an account
+Post http://localhost:8080/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "firstName": "Rouven",
+  "lastName": "Nauke",
+  "email": "RouvenNauke@example.com",
+  "password": "passwort"
+}
+
+### Authenticate an Account
+Post http://localhost:8080/api/v1/auth/authenticate
+Content-Type: application/json
+
+{
+  "email": "RouvenNauke@example.com",
+  "password": "passwort"
+}
