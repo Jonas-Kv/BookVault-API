@@ -5,7 +5,7 @@ A robust, containerized RESTful API for library management. This project demonst
 ---
 
 ## Overview
-**BookVault** enables users to manage book inventories with a clear separation of concerns. It features a strict role-based access model (User/Admin) and stateless authentication via JWT. The entire infrastructure is pre-configured for immediate deployment using Docker.
+**BookVault** enables users to manage book inventories with a clear separation of concerns. It features stateless authentication via JWT. The entire infrastructure is pre-configured for immediate deployment using Docker.
 
 ### Key Features
 * **Full Auth System:** Registration and Login powered by Spring Security.
