@@ -1,25 +1,26 @@
+
+
 ### Autoren
 ### Alle Autoren mit ihren Werken
 GET http://localhost:8080/api/v1/authors/books
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSb3V2ZW5OYXVrZUBleGFtcGxlLmNvbSIsImlhdCI6MTc3NTEzMTYwNSwiZXhwIjoxNzc1MTMzMDQ1fQ.ckFlfPWDRBna6wyl05svXm-qcYAAIc9j9AAKRQGko50
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSb3V2ZW5OYXVrZUBleGFtcGxlLmNvbSIsImlhdCI6MTc3NTE0MDQ4MywiZXhwIjoxNzc1MTQxOTIzfQ.Vx1toayxow26xps8NKyvp79y9ztTE15B4OResZ57Ktk
 
 ### Einzelne Autoren mit ihren Werken
 GET http://localhost:8080/api/v1/authors/1/books
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSb3V2ZW5OYXVrZUBleGFtcGxlLmNvbSIsImlhdCI6MTc3NTEzMTUzNywiZXhwIjoxNzc1MTMyOTc3fQ.erDf_WBHg8dU6-8oXTEPVXJ4UaZ_B3NRsuJdYSq0eWA
+Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 
 ### Alle Autoren ohne ihre Werke
 GET http://localhost:8080/api/v1/authors
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSb3V2ZW5OYXVrZUBleGFtcGxlLmNvbSIsImlhdCI6MTc3NTEzMTYwNSwiZXhwIjoxNzc1MTMzMDQ1fQ.ckFlfPWDRBna6wyl05svXm-qcYAAIc9j9AAKRQGko50
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSb3V2ZW5OYXVrZUBleGFtcGxlLmNvbSIsImlhdCI6MTc3NTE0MDQ4MywiZXhwIjoxNzc1MTQxOTIzfQ.Vx1toayxow26xps8NKyvp79y9ztTE15B4OResZ57Ktk
 
 
 ### Einzelne Autoren ohne ihre Werke
 GET http://localhost:8080/api/v1/authors/2
-Authorization: Bearer {Hier Token einfügen}
+Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 
 ### Autor erstellen
 POST http://localhost:8080/api/v1/authors
-Authorization: Bearer {Hier Token einfügen}
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSb3V2ZW5OYXVrZUBleGFtcGxlLmNvbSIsImlhdCI6MTc3NTE0MDQ4MywiZXhwIjoxNzc1MTQxOTIzfQ.Vx1toayxow26xps8NKyvp79y9ztTE15B4OResZ57Ktk
 Content-Type: application/json
 
 {
@@ -28,13 +29,15 @@ Content-Type: application/json
 
 ### Autor mit all seinen Büchern löschen
 DELETE http://localhost:8080/api/v1/authors/1
-
+Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 
 ### Autor und alle seine Bücher löschen
 DELETE http://localhost:8080/api/v1/authors
+Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 
 ### Update Author name
 PATCH http://localhost:8080/api/v1/authors/3
+Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 Content-Type: application/json
 
 {
@@ -43,17 +46,21 @@ Content-Type: application/json
 
 
 ###Books
-### Alle Bücher
+### Get all Books
 GET http://localhost:8080/api/v1/books
+Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 
-### Einzelne Bücher
+### Get single Books
 GET http://localhost:8080/api/v1/books/1
+Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 
 ### Alle vorhanden Büchertitel ausgeben
 GET http://localhost:8080/api/v1/books/all
+Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 
 ### ISBN durch Titel herausbekommen
 GET http://localhost:8080/api/v1/books/findISBN?title=How%20to%20be%20arbeitslos
+Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 
 ### Neues Buch anlegen
 POST http://localhost:8080/api/v1/books
@@ -68,14 +75,9 @@ Content-Type: application/json
 
 ### Buch Löschen, Autor bleibt
 DELETE http://localhost:8080/api/v1/books/4
+Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 
-
-###Security
-### Get access
-GET http://localhost:8080/api/v1/demo-controller
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSb3V2ZW5OYXVrZUBleGFtcGxlLmNvbSIsImlhdCI6MTc3NTA4MjE0MiwiZXhwIjoxNzc1MDgzNTgyfQ.tPfXRuG_UlXmcPUXl7EDXfd0Gp6zfLgA6C8XmE3j9Ps
-
-
+### Security
 ### Register an account
 Post http://localhost:8080/api/v1/auth/register
 Content-Type: application/json

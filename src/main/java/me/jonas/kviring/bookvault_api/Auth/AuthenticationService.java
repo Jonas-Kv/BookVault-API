@@ -22,6 +22,10 @@ public class AuthenticationService {
   private final AuthenticationManager authenticationManager;
     
   public AuthenticationResponse register(RegisterRequest request) {
+    if (repository.existsByEmail(request.getEmail())) {
+      throw new IllegalStateException("Email already taken");
+    }
+
     var user = User.builder()
     .firstname(request.getFirstName())
     .lastname(request.getLastName())

@@ -11,5 +11,19 @@ services:
     volumes:
       -  db-data:/var/lib/postgresql
 
+  app:
+      build: .
+      container_name: bookvault_api_app
+      ports:
+        - "8080:8080"
+      environment:
+        SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/bookvault_api_db
+        SPRING_DATASOURCE_USERNAME: ${DB_USERNAME}
+        SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+        SPRING_JPA_HIBERNATE_DDL_AUTO: update
+        SECRET_KEY: ${SECRET_KEY}
+      depends_on:
+        - db
+
 volumes:
   db-data:
