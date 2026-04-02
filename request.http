@@ -1,24 +1,24 @@
 
 
-### Autoren
-### Alle Autoren mit ihren Werken
+### Author
+### Every Author, with their Books
 GET http://localhost:8080/api/v1/authors/books
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSb3V2ZW5OYXVrZUBleGFtcGxlLmNvbSIsImlhdCI6MTc3NTE0MDQ4MywiZXhwIjoxNzc1MTQxOTIzfQ.Vx1toayxow26xps8NKyvp79y9ztTE15B4OResZ57Ktk
 
-### Einzelne Autoren mit ihren Werken
+### Single Author with their Books
 GET http://localhost:8080/api/v1/authors/1/books
 Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 
-### Alle Autoren ohne ihre Werke
+### Every Author without their Books
 GET http://localhost:8080/api/v1/authors
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSb3V2ZW5OYXVrZUBleGFtcGxlLmNvbSIsImlhdCI6MTc3NTE0MDQ4MywiZXhwIjoxNzc1MTQxOTIzfQ.Vx1toayxow26xps8NKyvp79y9ztTE15B4OResZ57Ktk
 
 
-### Einzelne Autoren ohne ihre Werke
+### Single Author without Books
 GET http://localhost:8080/api/v1/authors/2
 Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 
-### Autor erstellen
+### Create Author
 POST http://localhost:8080/api/v1/authors
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSb3V2ZW5OYXVrZUBleGFtcGxlLmNvbSIsImlhdCI6MTc3NTE0MDQ4MywiZXhwIjoxNzc1MTQxOTIzfQ.Vx1toayxow26xps8NKyvp79y9ztTE15B4OResZ57Ktk
 Content-Type: application/json
@@ -27,12 +27,8 @@ Content-Type: application/json
   "name": "Nauke"
 }
 
-### Autor mit all seinen Büchern löschen
+### Delete Author with their Books
 DELETE http://localhost:8080/api/v1/authors/1
-Authorization: Bearer PASTE_YOUR_TOKEN_HERE
-
-### Autor und alle seine Bücher löschen
-DELETE http://localhost:8080/api/v1/authors
 Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 
 ### Update Author name
@@ -54,15 +50,15 @@ Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 GET http://localhost:8080/api/v1/books/1
 Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 
-### Alle vorhanden Büchertitel ausgeben
+### Get all Book names
 GET http://localhost:8080/api/v1/books/all
 Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 
-### ISBN durch Titel herausbekommen
+### Get title through ISBN
 GET http://localhost:8080/api/v1/books/findISBN?title=How%20to%20be%20arbeitslos
 Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 
-### Neues Buch anlegen
+### Create a new Book
 POST http://localhost:8080/api/v1/books
 Content-Type: application/json
 
@@ -73,7 +69,7 @@ Content-Type: application/json
   
 }
 
-### Buch Löschen, Autor bleibt
+### Delete Book (Author stays)
 DELETE http://localhost:8080/api/v1/books/4
 Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 
