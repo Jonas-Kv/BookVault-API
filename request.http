@@ -3,7 +3,7 @@
 ### Author
 ### Every Author, with their Books
 GET http://localhost:8080/api/v1/authors/books
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSb3V2ZW5OYXVrZUBleGFtcGxlLmNvbSIsImlhdCI6MTc3NTE0MDQ4MywiZXhwIjoxNzc1MTQxOTIzfQ.Vx1toayxow26xps8NKyvp79y9ztTE15B4OResZ57Ktk
+Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 
 ### Single Author with their Books
 GET http://localhost:8080/api/v1/authors/1/books
@@ -11,7 +11,7 @@ Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 
 ### Every Author without their Books
 GET http://localhost:8080/api/v1/authors
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSb3V2ZW5OYXVrZUBleGFtcGxlLmNvbSIsImlhdCI6MTc3NTE0MDQ4MywiZXhwIjoxNzc1MTQxOTIzfQ.Vx1toayxow26xps8NKyvp79y9ztTE15B4OResZ57Ktk
+Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 
 
 ### Single Author without Books
@@ -20,7 +20,7 @@ Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 
 ### Create Author
 POST http://localhost:8080/api/v1/authors
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSb3V2ZW5OYXVrZUBleGFtcGxlLmNvbSIsImlhdCI6MTc3NTE0MDQ4MywiZXhwIjoxNzc1MTQxOTIzfQ.Vx1toayxow26xps8NKyvp79y9ztTE15B4OResZ57Ktk
+Authorization: Bearer PASTE_YOUR_TOKEN_HERE
 Content-Type: application/json
 
 {
